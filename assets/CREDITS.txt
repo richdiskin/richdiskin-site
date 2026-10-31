@@ -1,0 +1,8 @@
+Image credits: rd_luxe_v4 mockup
+
+nfl-action.jpg, college-gameday.jpg, webdesign.jpg, predictive.jpg
+  Source: generated images approved by Rich (Grok Bot, Oct 31 2026). No real people, no logos, no text.
+  Recompressed to JPEG q88 progressive, 1280x720, 140-225 KB each.
+
+favicon.svg
+  Hand-written SVG "RD" monogram (carried over from v3).
