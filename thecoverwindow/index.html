@@ -188,6 +188,7 @@ footer{border-top:1px solid var(--line);padding:36px 0 calc(36px + env(safe-area
   .foot .dot{display:none}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.hero-bg img{animation:none!important}}
+.show-all{margin-top:20px;cursor:pointer;font:inherit}
 </style>
 </head>
 <body>
@@ -309,13 +310,23 @@ footer{border-top:1px solid var(--line);padding:36px 0 calc(36px + env(safe-area
     status.appendChild(a);
   }
 
+  var STORIES = "https://stories.thecoverwindow.com", NFLMETA = {}, CFBMETA = {};
   function render(key, data, rowFor){
     var games = (data && Array.isArray(data.games)) ? data.games.filter(function(g){ return g && g.matchup; }) : [];
     if (!games.length) { fail(key); return; }
     if (data.slate) document.getElementById(key + "-title").textContent = data.slate;
+    if (key === "nfl") NFLMETA = data; else CFBMETA = data;
     var list = document.getElementById(key + "-rows");
     games.sort(byKickoff).forEach(function(g, i){ list.appendChild(rowFor(g, i)); });
     document.getElementById(key + "-status").remove();
+    if (key === "cfb" && games.length > 8) {
+      var rows = list.children;
+      for (var j = 8; j < rows.length; j++) rows[j].hidden = true;
+      var b = el("button", "btn btn-ghost show-all", "Show all " + games.length + " college games");
+      b.type = "button";
+      b.addEventListener("click", function(){ for (var k = 0; k < rows.length; k++) rows[k].hidden = false; b.remove(); });
+      list.parentNode.appendChild(b);
+    }
   }
 
   function rowBase(g, i, href){
@@ -330,7 +341,8 @@ footer{border-top:1px solid var(--line);padding:36px 0 calc(36px + env(safe-area
 
   function nflRow(g, i){
     var slug = slugify(g.matchup);
-    var fan = SITE + "/nfl/fanatic/" + slug, gam = SITE + "/nfl/gambler/" + slug;
+    var base = STORIES + "/nfl/" + (NFLMETA.season || 2026) + "/week-" + NFLMETA.week + "/" + slug;
+    var fan = base + "/fanatic/", gam = base + "/gambler/";
     var li = rowBase(g, i, fan), links = el("div", "row-links");
     links.appendChild(link(fan, "Fanatic story"));
     links.appendChild(link(gam, "Gambler story"));
@@ -338,7 +350,19 @@ footer{border-top:1px solid var(--line);padding:36px 0 calc(36px + env(safe-area
     return li;
   }
 
-  function cfbRow(g, i){ return rowBase(g, i + 1, SITE + "/college"); }
+  function cfbRow(g, i){
+    var slug = slugify(g.matchup);
+    var dts = CFBMETA.slate_dates || [];
+    var last = dts[dts.length - 1];
+    if (!last) return rowBase(g, i + 1, SITE + "/college");
+    var mo = ["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"][parseInt(last.slice(5,7),10) - 1];
+    var base = STORIES + "/college/" + last.slice(0,4) + "/" + mo + "-" + last.slice(8,10) + "/" + slug;
+    var li = rowBase(g, i + 1, base + "/fanatic/"), links = el("div", "row-links");
+    links.appendChild(link(base + "/fanatic/", "Fanatic story"));
+    links.appendChild(link(base + "/gambler/", "Gambler story"));
+    li.appendChild(links);
+    return li;
+  }
 
   function load(key, path, rowFor){
     fetch(FEED + path, {cache: "no-cache"})
