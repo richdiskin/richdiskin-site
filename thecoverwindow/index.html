@@ -355,17 +355,13 @@ footer{border-top:1px solid var(--line);padding:36px 0 calc(36px + env(safe-area
     var season = data.season || 2026, week = parseInt(data.week, 10);
     var wk = function(n){ return STORIES + "/nfl/" + season + "/week-" + n; };
     var index = has(wk(week) + "/") ? wk(week) + "/" : STORIES + "/nfl/";
-    var ul = document.getElementById("nfl-rows"), cardFan = null, cardGam = null;
+    var ul = document.getElementById("nfl-rows");
     list.forEach(function(g){
       var slug = gameSlug(g), bases = [wk(week) + "/" + slug];
       if (week > 1) bases.push(wk(week - 1) + "/" + slug); // carried-over Monday games
       var r = resolve(bases, index);
-      if (!cardFan && r.fan) cardFan = r.fan;
-      if (!cardGam && r.gam) cardGam = r.gam;
       ul.appendChild(row(g, r));
     });
-    if (cardFan) document.getElementById("card-fanatic").href = cardFan;
-    if (cardGam) document.getElementById("card-gambler").href = cardGam;
     document.getElementById("nfl-status").remove();
   }
 
