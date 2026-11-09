@@ -72,17 +72,16 @@ a{color:inherit;text-decoration:none}
 
 .top{border-bottom:1px solid var(--line);background:#0A0A0A;position:sticky;top:0;z-index:3}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:76px;gap:16px}
-.home-link{display:inline-flex;align-items:center;min-height:44px;font-family:var(--serif);font-size:24px;font-weight:400;color:#fff;letter-spacing:-.005em}
+.home-link{display:inline-flex;align-items:center;min-height:44px;font-size:12px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:var(--ink2);transition:color .3s ease}
+.home-link:hover,.home-link:focus-visible{color:var(--ink)}
 .home-link:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
-.top-note{font-size:11px;font-weight:400;letter-spacing:.28em;text-transform:uppercase;color:var(--ink3)}
 
 .hero{position:relative;overflow:hidden;background:var(--bg)}
 .hero::before{content:"";position:absolute;inset:0;pointer-events:none;
   background:radial-gradient(ellipse 68% 58% at 18% 42%,rgba(212,182,122,.09),transparent 68%)}
 .hero-inner{position:relative;z-index:1;padding:clamp(64px,9vw,112px) 0 clamp(72px,9vw,112px)}
 .hero-copy{max-width:760px}
-.role{font-size:12px;font-weight:400;letter-spacing:.42em;text-transform:uppercase;color:var(--ink2)}
-.name{font-family:var(--serif);font-weight:300;font-size:clamp(92px,12vw,156px);line-height:.84;letter-spacing:-.035em;color:#fff;margin-top:14px}
+.name{font-family:var(--serif);font-weight:300;font-size:clamp(92px,12vw,156px);line-height:.84;letter-spacing:-.035em;color:#fff;margin-top:0}
 .subname{margin-top:18px;font-size:13px;font-weight:400;letter-spacing:.32em;text-transform:uppercase;color:var(--ink2)}
 .rule{width:clamp(96px,14vw,168px);height:1px;background:var(--gold);margin:clamp(28px,3.6vw,40px) 0;border:0}
 .tagline{text-wrap:balance;font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(28px,3.4vw,44px);line-height:1.25;color:var(--ink);max-width:16em}
@@ -145,10 +144,9 @@ footer{border-top:1px solid var(--line);padding:clamp(48px,6vw,72px) 0 calc(36px
 .dot{color:var(--gold-soft)}
 
 @media (max-width:640px){
-  .top-note{display:none}
-  .role,.label{letter-spacing:.16em}
+  .label{letter-spacing:.16em}
   .subname,.truth,.foot-truth{letter-spacing:.14em;font-size:11px}
-  .name{font-size:clamp(84px,24vw,112px);margin-top:14px}
+  .name{font-size:clamp(84px,24vw,112px);margin-top:0}
   .tagline{font-size:30px}
   .lede,.standards p,.card p{font-size:16px}
   .card .qualifier{font-size:20px}
@@ -166,8 +164,7 @@ footer{border-top:1px solid var(--line);padding:clamp(48px,6vw,72px) 0 calc(36px
 
 <div class="top">
   <div class="wrap">
-    <a class="home-link" href="/">Rich Diskin</a>
-    <p class="top-note">Miami Beach, FL</p>
+    <a class="home-link" href="/">Home</a>
   </div>
 </div>
 
@@ -176,7 +173,6 @@ footer{border-top:1px solid var(--line);padding:clamp(48px,6vw,72px) 0 calc(36px
     <div class="wrap">
       <div class="hero-copy">
         <div class="mast">
-          <p class="role">Rich Diskin</p>
           <h1 class="name">FNN</h1>
           <p class="subname">Fake News Network</p>
         </div>
