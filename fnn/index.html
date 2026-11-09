@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FNN · Fake News Network by Rich Diskin</title>
+<meta name="description" content="FNN Fake News Network from Rich Diskin. News so real, it must be fake. Truth-seeking, God-loving, spin-free news, and the receipts.">
+<meta name="author" content="Rich Diskin">
+<link rel="canonical" href="https://www.richdiskin.com/fnn/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rich Diskin">
+<meta property="og:url" content="https://www.richdiskin.com/fnn/">
+<meta property="og:title" content="FNN · Fake News Network by Rich Diskin">
+<meta property="og:description" content="FNN Fake News Network from Rich Diskin. News so real, it must be fake. Truth-seeking, God-loving, spin-free news, and the receipts.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@fnnfakenews911">
+<meta name="twitter:title" content="FNN · Fake News Network by Rich Diskin">
+<meta name="twitter:description" content="FNN Fake News Network from Rich Diskin. News so real, it must be fake. Truth-seeking, God-loving, spin-free news, and the receipts.">
+<meta name="theme-color" content="#0A0A0A">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.richdiskin.com/#person",
+      "name": "Rich Diskin",
+      "url": "https://www.richdiskin.com/"
+    },
+    {
+      "@type": "NewsMediaOrganization",
+      "@id": "https://www.fnnfakenewsnetwork.com/#org",
+      "name": "FNN Fake News Network",
+      "alternateName": ["FNN", "Fake News Network"],
+      "url": "https://www.fnnfakenewsnetwork.com/",
+      "slogan": "News so real, it must be fake.",
+      "email": "wtf@fnnfakenewsnetwork.com",
+      "sameAs": ["https://x.com/fnnfakenews911"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.richdiskin.com/fnn/#webpage",
+      "url": "https://www.richdiskin.com/fnn/",
+      "name": "FNN · Fake News Network by Rich Diskin",
+      "description": "FNN Fake News Network from Rich Diskin. News so real, it must be fake. Truth-seeking, God-loving, spin-free news, and the receipts.",
+      "isPartOf": {"@type": "WebSite", "name": "Rich Diskin", "url": "https://www.richdiskin.com/"},
+      "about": {"@id": "https://www.fnnfakenewsnetwork.com/#org"},
+      "author": {"@id": "https://www.richdiskin.com/#person"}
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0A0A0A; --bg2:#0F0F0F; --card:#121212;
+  --ink:#F5F2EC; --ink2:rgba(245,242,236,.76); --ink3:rgba(245,242,236,.58);
+  --line:rgba(245,242,236,.10);
+  --gold:#D4B67A; --gold-soft:rgba(212,182,122,.55);
+  --serif:"Cormorant Garamond","Times New Roman",serif;
+  --sans:"Jost","Helvetica Neue",Arial,sans-serif;
+  --wrap:1200px; --pad:clamp(24px,5vw,64px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg);-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
+
+.top{border-bottom:1px solid var(--line);background:#0A0A0A;position:sticky;top:0;z-index:3}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:76px;gap:16px}
+.home-link{display:inline-flex;align-items:center;min-height:44px;font-family:var(--serif);font-size:24px;font-weight:400;color:#fff;letter-spacing:-.005em}
+.home-link:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
+.top-note{font-size:11px;font-weight:400;letter-spacing:.28em;text-transform:uppercase;color:var(--ink3)}
+
+.hero{position:relative;overflow:hidden;background:var(--bg)}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 68% 58% at 18% 42%,rgba(212,182,122,.09),transparent 68%)}
+.hero-inner{position:relative;z-index:1;padding:clamp(64px,9vw,112px) 0 clamp(72px,9vw,112px)}
+.hero-copy{max-width:760px}
+.role{font-size:12px;font-weight:400;letter-spacing:.42em;text-transform:uppercase;color:var(--ink2)}
+.name{font-family:var(--serif);font-weight:300;font-size:clamp(92px,12vw,156px);line-height:.84;letter-spacing:-.035em;color:#fff;margin-top:14px}
+.subname{margin-top:18px;font-size:13px;font-weight:400;letter-spacing:.32em;text-transform:uppercase;color:var(--ink2)}
+.rule{width:clamp(96px,14vw,168px);height:1px;background:var(--gold);margin:clamp(28px,3.6vw,40px) 0;border:0}
+.tagline{text-wrap:balance;font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(28px,3.4vw,44px);line-height:1.25;color:var(--ink);max-width:16em}
+.truth{margin-top:20px;font-size:12px;font-weight:400;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-soft);max-width:36em}
+.lede{margin-top:28px;font-size:18px;font-weight:400;line-height:1.7;color:rgba(245,242,236,.82);max-width:34em;text-wrap:balance}
+@media (min-width:900px){
+  .hero-copy{max-width:none;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:24px 72px;align-items:end}
+  .pitch .rule{margin-top:0}
+}
+.actions{display:flex;flex-wrap:wrap;gap:14px 18px;margin-top:36px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:0 22px;border:1px solid var(--gold);border-radius:0;
+  font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);background:transparent;
+  transition:background .35s ease,color .35s ease}
+.btn:hover,.btn:focus-visible{background:var(--gold);color:#0A0A0A}
+.btn.solid{background:var(--gold);color:#0A0A0A}
+.btn.solid:hover,.btn.solid:focus-visible{background:transparent;color:var(--gold)}
+.btn:focus-visible,.card:focus-visible,footer a:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
+.arrow{display:inline-block;width:18px;height:1px;background:currentColor;position:relative;transition:width .35s ease}
+.arrow::after{content:"";position:absolute;right:0;top:-3px;width:7px;height:7px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:rotate(45deg);transform-origin:center}
+.btn:hover .arrow,.card:hover .card-arrow .arrow,.card:focus-visible .card-arrow .arrow{width:26px}
+
+.label{display:flex;align-items:center;gap:20px;font-size:12px;font-weight:400;letter-spacing:.42em;text-transform:uppercase;color:var(--ink2)}
+.label::before{content:"";width:48px;height:1px;background:var(--gold)}
+.section{padding:clamp(80px,10vw,136px) 0;border-top:1px solid var(--line)}
+.section.alt{background:var(--bg2)}
+.section-line{text-wrap:balance;font-family:var(--serif);font-weight:400;font-size:clamp(36px,4.2vw,58px);line-height:1.05;letter-spacing:-.01em;color:#fff;margin-top:22px;max-width:14em}
+.section-line em{font-style:italic;font-weight:300;color:var(--gold)}
+
+.grid{display:grid;grid-template-columns:1fr;gap:clamp(22px,2.4vw,28px);margin-top:clamp(36px,4.5vw,56px)}
+@media (min-width:980px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{position:relative;display:flex;flex-direction:column;min-height:100%;background:var(--card);border:1px solid var(--line);color:inherit;
+  transition:border-color .5s ease,transform .5s ease,box-shadow .5s ease}
+.card:hover,.card:focus-visible{border-color:rgba(212,182,122,.38);transform:translateY(-4px);box-shadow:0 28px 60px -34px rgba(0,0,0,.9)}
+.body{display:flex;flex-direction:column;flex:1;padding:clamp(28px,3vw,40px)}
+.kicker{font-size:11px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.card h3{font-family:var(--serif);font-weight:400;font-size:clamp(32px,2.6vw,42px);line-height:1.05;letter-spacing:-.01em;color:#fff;margin-top:16px;text-wrap:balance}
+.card p{margin-top:16px;font-size:17px;font-weight:400;line-height:1.65;color:rgba(245,242,236,.78)}
+.card .qualifier{margin-top:18px;font-family:var(--serif);font-style:italic;font-weight:400;font-size:22px;line-height:1.4;color:var(--ink)}
+.card-arrow{align-self:flex-end;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin:auto -8px -8px 0;padding-top:28px;color:var(--gold-soft);transition:color .35s ease}
+.card-arrow .arrow{width:22px}
+.card:hover .card-arrow,.card:focus-visible .card-arrow{color:var(--gold)}
+
+.standards{max-width:40em}
+.standards p{margin-top:22px;font-size:18px;font-weight:400;line-height:1.7;color:rgba(245,242,236,.82);max-width:36em}
+
+footer{border-top:1px solid var(--line);padding:clamp(48px,6vw,72px) 0 calc(36px + env(safe-area-inset-bottom));background:var(--bg)}
+.foot-tag{text-wrap:balance;font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(26px,3vw,36px);line-height:1.3;color:var(--ink);text-align:center}
+.foot-truth{margin-top:14px;text-align:center;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-soft)}
+.foot-links{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:4px 18px;
+  font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3);text-align:center}
+.foot-links a{display:inline-flex;align-items:center;min-height:44px;color:var(--ink2);transition:color .3s ease}
+.foot-links a:hover{color:var(--ink)}
+.site-foot{margin-top:28px;padding-top:8px;border-top:1px solid var(--line)}
+.foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0 14px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3);text-align:center}
+.foot a,.foot>span:first-child{display:inline-flex;align-items:center;min-height:44px;transition:color .3s ease}
+.foot a:hover{color:var(--ink)}
+.dot{color:var(--gold-soft)}
+
+@media (max-width:640px){
+  .top-note{display:none}
+  .role,.label{letter-spacing:.16em}
+  .subname,.truth,.foot-truth{letter-spacing:.14em;font-size:11px}
+  .name{font-size:clamp(84px,24vw,112px);margin-top:14px}
+  .tagline{font-size:30px}
+  .lede,.standards p,.card p{font-size:16px}
+  .card .qualifier{font-size:20px}
+  .hero-inner{padding-top:56px}
+  .actions .btn{width:100%}
+  .foot-links,.foot{flex-direction:column;gap:0}
+  .foot-links .dot,.foot .dot{display:none}
+  .foot-links a{text-align:center;justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+<script data-goatcounter="https://richdiskin.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+<div class="top">
+  <div class="wrap">
+    <a class="home-link" href="/">Rich Diskin</a>
+    <p class="top-note">Miami Beach, FL</p>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="wrap">
+      <div class="hero-copy">
+        <div class="mast">
+          <p class="role">Rich Diskin</p>
+          <h1 class="name">FNN</h1>
+          <p class="subname">Fake News Network</p>
+        </div>
+        <div class="pitch">
+          <hr class="rule">
+          <p class="tagline">News so real, it must be fake.</p>
+          <p class="truth">Truth-seeking. God-loving. Spin-free.</p>
+          <p class="lede">First-principles, no-spin news. What they said, when they said it, what happened, and the receipt.</p>
+          <div class="actions">
+            <a class="btn solid" href="https://www.fnnfakenewsnetwork.com/" target="_blank" rel="noopener noreferrer">Read Fake News Network <span class="arrow" aria-hidden="true"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section" aria-labelledby="sections-label">
+    <div class="wrap">
+      <h2 class="label" id="sections-label">Sections</h2>
+      <p class="section-line">The paper. The record. <em>One standard.</em></p>
+      <div class="grid">
+        <a class="card" href="https://www.fnnfakenewsnetwork.com/" target="_blank" rel="noopener noreferrer">
+          <div class="body">
+            <p class="kicker">Main paper</p>
+            <h3>Fake News Network</h3>
+            <p>Then-vs-Now, Top Stories, Media Watch.</p>
+            <span class="card-arrow" aria-hidden="true"><span class="arrow"></span></span>
+          </div>
+        </a>
+
+        <a class="card" href="https://www.fnnfakenewsnetwork.com/hoax-files" target="_blank" rel="noopener noreferrer">
+          <div class="body">
+            <p class="kicker">Hoax Files</p>
+            <h3>The Hoax Files</h3>
+            <p>A living, evidence-based record: where stories collapsed, where they were spin, and where the hoax label does not hold.</p>
+            <span class="card-arrow" aria-hidden="true"><span class="arrow"></span></span>
+          </div>
+        </a>
+
+        <a class="card" href="https://www.fnnfakenewsnetwork.com/mogazine" target="_blank" rel="noopener noreferrer">
+          <div class="body">
+            <p class="kicker">Gossip &amp; Entertainment</p>
+            <h3>The MOGazine</h3>
+            <p class="qualifier">Gossip must be true and real to the best of our knowledge.</p>
+            <span class="card-arrow" aria-hidden="true"><span class="arrow"></span></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" aria-labelledby="standards-title">
+    <div class="wrap">
+      <div class="standards">
+        <p class="label">Standards</p>
+        <h2 class="section-line" id="standards-title">Receipts first</h2>
+        <p>First-principles reporting is the basis for all FNN commentary, including gossip. Check the receipts, not just our word.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="foot-tag">News so real, it must be fake.</p>
+    <p class="foot-truth">Truth-seeking. God-loving. Spin-free.</p>
+    <div class="foot-links">
+      <a href="mailto:wtf@fnnfakenewsnetwork.com">Tips: wtf@fnnfakenewsnetwork.com</a>
+      <span class="dot" aria-hidden="true">·</span>
+      <a href="https://x.com/fnnfakenews911" target="_blank" rel="noopener noreferrer">@fnnfakenews911</a>
+      <span class="dot" aria-hidden="true">·</span>
+      <a href="https://www.fnnfakenewsnetwork.com/" target="_blank" rel="noopener noreferrer">fnnfakenewsnetwork.com</a>
+    </div>
+    <nav class="site-foot" aria-label="Site">
+      <div class="foot">
+        <span>© 2026 Rich Diskin</span><span class="dot" aria-hidden="true">·</span>
+        <a href="/fnn/">FNN</a><span class="dot" aria-hidden="true">·</span>
+        <a href="/thecoverwindow/">The Cover Window</a><span class="dot" aria-hidden="true">·</span>
+        <a href="/webdevelopment">Web Development</a>
+      </div>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
