@@ -142,6 +142,18 @@ footer{border-top:1px solid var(--line);padding:36px 0 calc(36px + env(safe-area
 .media img{filter:none}
 .media .tag{position:absolute;left:16px;top:14px;font-size:11px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);
   padding:5px 10px 5px 12px;background:rgba(10,10,10,.7)}
+.media-mark{display:flex;align-items:flex-end;background:
+  radial-gradient(ellipse 80% 90% at 82% 18%,rgba(212,182,122,.22),transparent 58%),
+  linear-gradient(165deg,#141414 0%,#0A0A0A 62%)}
+.media-mark .mark-copy{position:relative;z-index:1;padding:0 8px 8px 6px}
+.media-mark .mark-name{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(76px,8vw,108px);line-height:.84;letter-spacing:-.03em;color:#fff}
+.media-mark .mark-sub{display:block;margin-top:10px;font-size:11px;font-weight:400;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+@media (min-width:860px){
+  .card-fnn{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)}
+  .card-fnn .media{aspect-ratio:auto;min-height:340px;height:100%;border-bottom:0;border-right:1px solid var(--line)}
+  .card-fnn .mark-copy{padding:0 36px 40px}
+  .card-fnn .body{justify-content:center}
+}
 
 /* ---------- What's next band ---------- */
 .next{position:relative;min-height:clamp(520px,62vw,760px);display:flex;align-items:center;overflow:hidden;border-top:1px solid var(--line);background:#000}
@@ -182,7 +194,7 @@ footer{border-top:1px solid var(--line);padding:36px 0 calc(36px + env(safe-area
 .contact .rule{margin-left:auto;margin-right:auto}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","@id":"https://www.richdiskin.com/#person","name":"Rich Diskin","alternateName":["Richard J Diskin Jr","Richie Diskin","Richard Diskin"],"url":"https://www.richdiskin.com/","email":"mailto:rich@richdiskin.com","address":{"@type":"PostalAddress","addressLocality":"Miami Beach","addressRegion":"FL","addressCountry":"US"},"sameAs":["https://x.com/TheCoverWindow","https://x.com/DiskinRichie","https://www.thecoverwindow.com/"]}
+{"@context":"https://schema.org","@type":"Person","@id":"https://www.richdiskin.com/#person","name":"Rich Diskin","alternateName":["Richard J Diskin Jr","Richie Diskin","Richard Diskin"],"url":"https://www.richdiskin.com/","email":"mailto:rich@richdiskin.com","address":{"@type":"PostalAddress","addressLocality":"Miami Beach","addressRegion":"FL","addressCountry":"US"},"sameAs":["https://x.com/TheCoverWindow","https://x.com/DiskinRichie","https://www.thecoverwindow.com/","https://www.fnnfakenewsnetwork.com/","https://x.com/fnnfakenews911"]}
 </script>
 <script data-goatcounter="https://richdiskin.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -222,6 +234,20 @@ footer{border-top:1px solid var(--line);padding:36px 0 calc(36px + env(safe-area
             <span class="card-arrow" aria-hidden="true"><span class="arrow"></span></span>
           </div>
         </a>
+        <a class="card card-fnn" href="/fnn/">
+          <div class="media media-mark">
+            <span class="mark-copy">
+              <span class="mark-name">FNN</span>
+              <span class="mark-sub">Fake News Network</span>
+            </span>
+            <span class="tag">News</span>
+          </div>
+          <div class="body">
+            <h3>FNN</h3>
+            <p>News so real, it must be fake. Truth-seeking. God-loving. Spin-free.</p>
+            <span class="card-arrow" aria-hidden="true"><span class="arrow"></span></span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -246,6 +272,7 @@ footer{border-top:1px solid var(--line);padding:36px 0 calc(36px + env(safe-area
   <div class="wrap foot">
     <span>© 2026 Rich Diskin</span><span class="dot" aria-hidden="true">·</span>
     <a href="https://www.thecoverwindow.com/" target="_blank" rel="noopener">The Cover Window</a><span class="dot" aria-hidden="true">·</span>
+    <a href="/fnn/">FNN</a><span class="dot" aria-hidden="true">·</span>
     <a href="/webdevelopment">Web Development</a><span class="dot" aria-hidden="true">·</span>
     <a href="https://x.com/TheCoverWindow" target="_blank" rel="noopener">@TheCoverWindow on X</a>
   </div>
