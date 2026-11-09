@@ -145,7 +145,10 @@ footer{border-top:1px solid var(--line);padding:36px 0 calc(36px + env(safe-area
 .media-mark{display:flex;align-items:flex-end;background:
   radial-gradient(ellipse 80% 90% at 82% 18%,rgba(212,182,122,.22),transparent 58%),
   linear-gradient(165deg,#141414 0%,#0A0A0A 62%)}
-.media-mark .mark-copy{position:relative;z-index:1;padding:0 8px 8px 6px}
+.media-mark .mark-copy{position:relative;z-index:1;padding:0 28px 28px}
+.fnn-values{list-style:none;margin:4px 0 28px;padding:0;border-top:1px solid var(--line)}
+.fnn-values li{display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:16px;letter-spacing:.02em;color:#fff}
+.fnn-values span{font-size:11px;letter-spacing:.24em;color:var(--gold)}
 .media-mark .mark-name{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(76px,8vw,108px);line-height:.84;letter-spacing:-.03em;color:#fff}
 .media-mark .mark-sub{display:block;margin-top:10px;font-size:11px;font-weight:400;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
 @media (min-width:860px){
@@ -243,8 +246,13 @@ footer{border-top:1px solid var(--line);padding:36px 0 calc(36px + env(safe-area
             <span class="tag">News</span>
           </div>
           <div class="body">
-            <h3>FNN</h3>
-            <p>News so real, it must be fake. Truth-seeking. God-loving. Spin-free.</p>
+            <h3>First-principles news</h3>
+            <p>FNN is a news reporting agency built on first principles. We detect spin and agenda, and we refuse to pass them on.</p>
+            <ul class="fnn-values">
+              <li><span>01</span>Start from first principles</li>
+              <li><span>02</span>Detect the spin</li>
+              <li><span>03</span>Refuse the agenda</li>
+            </ul>
             <span class="card-arrow" aria-hidden="true"><span class="arrow"></span></span>
           </div>
         </a>
