@@ -568,9 +568,11 @@ footer{border-top:1px solid var(--line);padding:36px 0 calc(36px + env(safe-area
     var day = dts.find(function(d){ return new Date(d + "T12:00:00Z").getUTCDay() === 6; }) || dts[dts.length - 1];
     if (!list.length || !day) { fail("cfb"); return; }
     weekendReview("cfb", "college");
-    if (data.slate) document.getElementById("cfb-title").textContent = data.slate;
     var folder = STORIES + "/college/" + day.slice(0, 4) + "/" + MONTHS[parseInt(day.slice(5, 7), 10) - 1] + "-" + day.slice(8, 10);
-    var index = has(folder + "/") ? folder + "/" : STORIES + "/college/";
+    // New week not built on Games yet: keep the page's current college section, same as Games.
+    if (SITEMAP === null || !SITEMAP.has(folder + "/")) { var st0 = document.getElementById("cfb-status"); if (st0) st0.remove(); return; }
+    if (data.slate) document.getElementById("cfb-title").textContent = data.slate;
+    var index = folder + "/";
     var ul = document.getElementById("cfb-rows");
     ul.innerHTML = "";
     list.forEach(function(g){
