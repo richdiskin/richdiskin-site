@@ -544,7 +544,9 @@ footer{border-top:1px solid var(--line);padding:36px 0 calc(36px + env(safe-area
     weekendReview("nfl", "nfl");
     // New week not built on Games yet: keep the page's current NFL section, same as Games.
     var wk0 = STORIES + "/nfl/" + (data.season || 2026) + "/week-" + parseInt(data.week, 10) + "/";
-    if (SITEMAP === null || !SITEMAP.has(wk0)) { var sn0 = document.getElementById("nfl-status"); if (sn0) sn0.remove(); return; }
+    var built0 = false;
+    if (SITEMAP !== null) SITEMAP.forEach(function(u){ if (u.indexOf(wk0) === 0 && /\/fanatic\/$/.test(u)) built0 = true; });
+    if (!built0) { var sn0 = document.getElementById("nfl-status"); if (sn0) sn0.remove(); return; }
     // finished week: keep the static next-week rows, unless they are this same week (then add the recaps)
     if (!upcoming.length && (!ul || ul.getAttribute("data-week") !== String(data.week))) return;
     if (data.slate) document.getElementById("nfl-title").textContent = data.slate;
